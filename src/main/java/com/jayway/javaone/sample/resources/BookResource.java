@@ -3,10 +3,12 @@ package com.jayway.javaone.sample.resources;
 import com.jayway.forest.legacy.constraint.DoNotDiscover;
 import com.jayway.forest.legacy.core.RoleManager;
 import com.jayway.forest.legacy.exceptions.BadRequestException;
+import com.jayway.forest.legacy.exceptions.NotFoundException;
 import com.jayway.forest.legacy.roles.ReadableResource;
 import com.jayway.javaone.sample.constraints.HasBoughtBook;
 import com.jayway.javaone.sample.constraints.LoggedIn;
 import com.jayway.javaone.sample.domain.Book;
+import com.jayway.javaone.sample.domain.BookRepository;
 import com.jayway.javaone.sample.domain.CustomerRepository;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,8 +17,11 @@ public class BookResource implements ReadableResource<BookDTO> {
 
 	private final Book book;
 
-    public BookResource(Book book) {
-		this.book = book;
+    public BookResource(String id) {
+        book = BookRepository.get(id);
+        if (book == null) {
+            throw new NotFoundException( "No such book '" + id + "'");
+        }
 	}
 
     @DoNotDiscover

@@ -23,10 +23,6 @@ public class BooksResource implements IdDiscoverableResource {
 
     @Override
     public Resource id( String id ) {
-    	Book book = BookRepository.get(id);
-    	if (book == null) {
-            throw new NotFoundException( "No such book '" + id + "'");
-    	}
-		return new BookResource(book);
+		return new BookResource(id);
     }
 }
