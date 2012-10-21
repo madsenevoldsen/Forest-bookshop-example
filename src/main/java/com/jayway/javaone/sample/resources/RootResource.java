@@ -1,12 +1,12 @@
 package com.jayway.javaone.sample.resources;
 
-import com.jayway.forest.legacy.exceptions.BadRequestException;
-import com.jayway.forest.legacy.roles.Resource;
-import com.jayway.javaone.sample.constraints.LoggedIn;
+import static com.jayway.forest.core.RoleManager.role;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.jayway.forest.legacy.core.RoleManager.role;
+import com.jayway.forest.exceptions.BadRequestException;
+import com.jayway.forest.roles.Resource;
+import com.jayway.javaone.sample.constraints.LoggedIn;
 
 public class RootResource implements Resource {
 

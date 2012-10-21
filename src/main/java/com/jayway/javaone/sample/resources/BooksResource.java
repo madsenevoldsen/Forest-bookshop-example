@@ -3,10 +3,9 @@ package com.jayway.javaone.sample.resources;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jayway.forest.legacy.exceptions.NotFoundException;
-import com.jayway.forest.legacy.roles.IdDiscoverableResource;
-import com.jayway.forest.legacy.roles.Linkable;
-import com.jayway.forest.legacy.roles.Resource;
+import com.jayway.forest.roles.IdDiscoverableResource;
+import com.jayway.forest.roles.Linkable;
+import com.jayway.forest.roles.Resource;
 import com.jayway.javaone.sample.domain.Book;
 import com.jayway.javaone.sample.domain.BookRepository;
 

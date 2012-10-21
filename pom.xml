@@ -3,38 +3,33 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<artifactId>forest-samples-bank</artifactId>
-		<groupId>com.jayway.forest</groupId>
-		<version>0.4.0-SNAPSHOT</version>
-	</parent>
 	<groupId>com.jayway.forest</groupId>
-	<artifactId>book-shop-effective-hateoas</artifactId>
-	<name>book-shop-effective-hateoas</name>
+	<artifactId>bookshop-example</artifactId>
+	<name>bookshop-example</name>
+	<version>0.3.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.jayway.forest</groupId>
 			<artifactId>forest-core</artifactId>
-			<version>0.4.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.jayway.forest</groupId>
-			<artifactId>forest-legacy</artifactId>
-			<version>0.4.0-SNAPSHOT</version>
+			<version>0.3.0.M2</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
+			<version>1.6.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.2</version>
 		</dependency>
 	</dependencies>
 

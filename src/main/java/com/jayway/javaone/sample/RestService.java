@@ -1,9 +1,9 @@
 package com.jayway.javaone.sample;
 
-import com.jayway.forest.legacy.core.Application;
-import com.jayway.forest.legacy.di.grove.GroveDependencyInjectionImpl;
-import com.jayway.forest.legacy.roles.Resource;
-import com.jayway.forest.legacy.servlet.RestfulServlet;
+import com.jayway.forest.core.Application;
+import com.jayway.forest.di.grove.GroveDependencyInjectionImpl;
+import com.jayway.forest.roles.Resource;
+import com.jayway.forest.servlet.RestfulServlet;
 import com.jayway.javaone.sample.resources.RootResource;
 
 public class RestService extends RestfulServlet {
